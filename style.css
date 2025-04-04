@@ -21,10 +21,8 @@ main {
 
 header {
     margin: auto;
-    background-color: var(--primary-color);
     color: #000000;
     padding: 10px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,6 +47,12 @@ textarea {
     max-width: 800px;
     height: 100px;
     resize: none;
+}
+
+img {
+    width: 100%;
+    border: 1px solid var(--secundary-color);
+    border-radius: 5px;
 }
 
 /* CHILDS */
@@ -106,6 +110,11 @@ textarea:focus {
 }
 
 /* IDS */
+
+#logo {
+    width:150px;
+    border: none;
+}
 
 #banner {
     display: flex;
