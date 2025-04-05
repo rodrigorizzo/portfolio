@@ -55,6 +55,10 @@ img {
     border-radius: 5px;
 }
 
+li{
+    list-style-type: symbols(>);
+}
+
 /* CHILDS */
 
 nav ul {
@@ -76,6 +80,10 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: var(--secundary-color);
+}
+
+footer ul{
+    list-style-type:none;
 }
 
 button[type="submit"] {
@@ -129,23 +137,8 @@ textarea:focus {
 
 }
 
-#titulo {
-    flex-grow: 3;
-    padding: 0 10px;
-}
-
-#titulo * {
-    margin: 0;
-}
-
-#sobre p {
-    display: none;
-}
-
 /* MEDIA QUERY */
 
 @media screen and (max-width: 800px) {
-    #titulo {
-        display: none;
-    }
+   
 }
