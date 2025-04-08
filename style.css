@@ -1,27 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
-    --primary-color: #ffae61;
+    --primary-color: #ff6600;
     --secundary-color: #fcd6b2;
 }
 
-/* TAGS PRINCIPAIS */
+/* =============================== TAGS =============================== */
 
 * {
-    /*(apliquei tipografia a todas as tags*/
+    /*apliquei tipografia a todas as tags*/
     font-family: "Ubuntu", sans-serif;
+    color: #1b1b1b;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-size: 18px;
 }
 
 main {
     max-width: 800px;
     margin: auto;
-    background-color: rgba(0, 0, 255, var(--scroll));
     padding: 10px;
 }
 
 header {
     margin: auto;
-    color: #000000;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -29,7 +33,28 @@ header {
 }
 
 section {
-    padding: 10px;
+    padding: 0px;
+    margin: 0 0 100px 0;
+
+}
+
+a {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 3px;
+
+    &:hover {
+        text-decoration-style: solid;
+        text-decoration-thickness: 3px;
+    }
+
+    &.destaque{
+        border: 1px solid #fff;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 600;
+    }
 }
 
 input {
@@ -50,40 +75,45 @@ textarea {
 }
 
 img {
-    width: 100%;
-    border: 1px solid var(--secundary-color);
-    border-radius: 5px;
+    max-width: 100%;
 }
-
-li{
-    list-style-type: symbols(>);
-}
-
-/* CHILDS */
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
+
+    & li {
+        display: inline;
+
+        & a {
+            text-decoration: none;
+            color: #000000;
+            padding: 10px;
+
+            &:hover {
+                background-color: var(--secundary-color);
+            }
+        }
+    }
 }
 
-nav ul li {
-    display: inline;
-}
+footer {
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 50px;
 
-nav ul li a {
-    text-decoration: none;
-    color: #000000;
-    padding: 10px;
-}
+    & ul {
+        list-style-type: none;
+        padding: 0;
 
-nav ul li a:hover {
-    background-color: var(--secundary-color);
-}
+        & li {
+            display: inline;
+            padding: 0 10px 0 0;
+        }
 
-footer ul{
-    list-style-type:none;
+    }
 }
 
 button[type="submit"] {
@@ -93,52 +123,49 @@ button[type="submit"] {
     padding: 5px 40px;
     border-style: none;
     cursor: pointer;
+
+    &:hover {
+        background-color: var(--secundary-color);
+    }
 }
 
-button[type="submit"]:hover {
-    background-color: var(--secundary-color);
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 5px;
-    border: 3px solid var(--secundary-color);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
-
-input:focus,
-textarea:focus {
-    border: 3px solid var(--primary-color);
-}
-
-/* IDS */
+/* =============================== ID =============================== */
 
 #logo {
-    width:150px;
+    width: 150px;
     border: none;
 }
 
-#banner {
-    display: flex;
-    flex-direction: row;
-
-    margin: auto;
+#imgHero {
+    z-index: -1;
 }
 
-#banner div {
-    display: flex;
-    overflow-x: hidden;
+/* =============================== CLASS =============================== */
 
+.imgOriginal {
+    width: fit-content;
+    float: inline-end;
+    max-height: 100%;
 }
 
-/* MEDIA QUERY */
+.projeto {
+    padding: 100px 0;
 
-@media screen and (max-width: 800px) {
-   
+    & ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        & li {
+            padding: 0.5em 0.75em;
+            margin: 2px;
+            background-color: #fcd6b2;
+            border-radius: 10px;
+        }
+    }
 }
+
+/* =============================== MEDIA QUERY =============================== */
+
+@media screen and (max-width: 800px) {}

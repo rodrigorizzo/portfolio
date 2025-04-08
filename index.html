@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
-    <meta lang="pt-br" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rodrigo Rizzo Portfolio</title>
@@ -19,14 +18,14 @@
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
                 <li><a href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
-                        target="_blank">Currículo</a></li>
+                        target="_blank" class="destaque">Currículo</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="apresentacao">
-            <img src="" alt="Imagem" />
+        <section id="apresentacao">
+            <img id="imgHero" src="https://placehold.co/150x100" alt="Imagem" class="imgOriginal" />
             <h2>Olá, eu sou Rodrigo</h2>
             <p>Designer e Desenvolvedor Front-End dedicado a criar interfaces intuitivas e inovadoras, unindo
                 conhecimentos técnicos em HTML, CSS e JavaScript a princípios sólidos de UX/UI Design.</p>
@@ -38,27 +37,72 @@
         <section id="projetos">
             <h2>Portfolio</h2>
             <div>
-                <div>
+
+                <div class="projeto">
                     <img src="src/projeto_simular.png" alt="Projeto 1" />
-                    <h3>Simular: Plataforma de Estudos para Vestibulares</h3>
-                    <p>Estudo de Caso | Projeto Individual | UX/UI Design</p>
-                    <p> Desenvolvi uma plataforma educacional acessível, inspirada em desafios reais de estudantes. Com
-                        pesquisa de mercado, coleta de dados (53 entrevistados) e prototipagem iterativa, criei uma
-                        solução que prioriza usabilidade e clareza, desde os primeiros esboços até o protótipo
-                        interativo final.</p>
-                        <a href="">Protótipo Figma</a> <a href="">Processo</a> <a href="">Site</a>
-                    <span class="skill">Figma</span> <span class="skill">UX/UI</span>
+                    <span>UX/UI</span>
+                    <h3>Simular: plataforma de estudos para vestibular</h3>
+                    <ul>
+                        <li>Estudo de Caso</li>
+                        <li>Projeto Individual</li>
+                    </ul>
+                    <p> Plataforma de estudo pré-vestibular focada na resolução de questões e na realização de
+                        simulados. Foi desenvolvida desde o discovery até o protótipos interativos.
+                    </p>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Matriz CSD</li>
+                        <li>Desk Research</li>
+                        <li>Becnhmark</li>
+                        <li>Formulário</li>
+                        <li>Wireframe</li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Protótipo Figma</a></li>
+                        <li><a href="">Processo</a></li>
+                        <li><a href="">Site</a></li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="src/projeto_hiatozero.png" alt="Projeto 2" />
-                    <h3>Hiato Zero</h3>
-                    <p></p>
-                    <span class="skill">Figma</span> <span class="skill">UX/UI</span>
+
+                <div class="projeto">
+                    <img src="src/projeto_hiatozero.png" alt="Projeto 2" class="imgOriginal"/>
+                    <span>UX/UI</span>
+                    <h3>Hiato Zero: aplicativo de aprendizagem para adultos</h3>
+                    <ul>
+                        <li>Estudo de Caso</li>
+                        <li>Projeto Individual</li>
+                    </ul>
+                    <p>Aplicativo educativo destinado à jovens e adultos que desejam retomar o estudos, com ênfase no
+                        primeiro ciclo da educação básica. O projeto se inicia nas etapas de Discovery e se estende até
+                        a prototipagem.</p>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Matriz CSD</li>
+                        <li>Desk Research</li>
+                        <li>Becnhmark</li>
+                        <li>Formulário</li>
+                        <li>Wireframe</li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Protótipo Figma</a></li>
+                        <li><a href="">Processo</a></li>
+                        <li><a href="">Site</a></li>
+                    </ul>
                 </div>
-                <div>
+                <div class="projeto">
                     <img src="" alt="Projeto 3" />
-                    <h3>Próximo projeto</h3>
-                    <p>Em andamento</p>
+                    <span>Front-End</span>
+                    <h3>Rizzo: Portfólio profissional</h3>
+                    <ul>
+                        <li>Estudo de Caso</li>
+                        <li>Projeto Individual</li>
+                    </ul>
+                    <p>Foi desenvolvido uma página web para minhas informações básicas.</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                    </ul>
                 </div>
             </div>
             <p>Veja também meu Behance para projetos de design</p>
@@ -74,29 +118,27 @@
 
         <section id="experiencia">
             <h2>Experiência</h2>
-            <h3>Designer Freelance (Abr. 2021 – Presente)</h3>
+            <h3>Desenvolvedor Front End Freelance (Abr. 2025 – Presente)</h3>
             <ul>
-                <li>Responsável por todo o processo, desde o orçamento até o fechamento de arquivo para gráfica. </li>
-                <li>Exemplos de projeto jogos de tabuleiro, identidade visual, infográfico e papelaria empresarial.</li>
+                <li>Desenvolvimento de interfaces web responsivas com HTML, CSS e JS;</li>
+                <li>Implementação de layouts a partir de protótipos no Figma;</li>
+                <li>Utilização de Git para versionamento.</li>
             </ul>
+
+            
             <h3>Arte-finalista Júnior na Gráfica WBL (Jan. 2023 – Ago. 2024)</h3>
             <ul>
                 <li>Análise e adequação de arquivos enviados por clientes aos padrões de produção;</li>
                 <li>Montagem digital da folha de impressão com o melhor aproveitamento possível;</li>
                 <li>Organização e ordenação dos pedidos por tipo de material, processo de produção e urgência.</li>
             </ul>
-            <h3>Assistente de Arte-final na Cristaleria Ruvolo (Out. 2021 – Jan. 2022)</h3>
+
+            <h3>Designer Freelance (Abr. 2021 – Jan. 2023)</h3>
             <ul>
-                <li>Auxílio técnico à equipe de vendas de peças personalizadas;</li>
-                <li>Análise e adaptação da arte do cliente para os processos de gravação;</li>
-                <li>Produção de Mock Up com a arte do cliente na peça escolhida para aprovação.</li>
+                <li>Responsável por todo o processo, desde o orçamento até o fechamento de arquivo para gráfica. </li>
+                <li>Exemplos de projeto jogos de tabuleiro, identidade visual, infográfico e papelaria empresarial.</li>
             </ul>
-            <h3>Estagiário de Design de Produto na Toyster Brinquedos (Out. 2019 – Jul. 2020)</h3>
-            <ul>
-                <li>Desenvolvimento jogos de tabuleiro, brinquedos e embalagens;</li>
-                <li>Análise de mercado nacional e internacional para proposição de novos produtos;</li>
-                <li>Acompanhamento da qualidade na fábrica.</li>
-            </ul>
+           
 
             <a href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
                 target="_blank">Currículo completo</a> <a href="">English Resume</a>
