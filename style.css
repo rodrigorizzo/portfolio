@@ -1,15 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+
+/* =============================== VAR =============================== */
 :root {
+    /* max-width */
+    --max-w: 800px;
+
+    /* Cores */
     --primary-color: #ff6600;
-    --secundary-color: #fcd6b2;
+    --primary-color-light: #fcd6b2;
+    --secondary-color: #002088;
+    --secondary-color-dark: #061853;
     --white: #fff;
-    --black: #1b1b1b;
+    --black: #000;
+    --dark-gray: #333;
+    --light-gray: #aaa;
+
+    /* Espaçamentos */
+    --spc-small: 0.5em;
+    --spc-normal: 1em;
+    --spc-large: 2em;
+    --spc-extralarge: 3em;
+
+    /* componentes*/
+    --pdd-button: 0.6em 1.2em 0.4em 1.2em;
+    --pdd-etiqueta: 0.2em 0.4em 0.1em 0.4em;
+    --radius: 2px;
+
 }
 
 /* =============================== TAGS =============================== */
 
-* {
+html {
+    /* tamanho da fonte raíz */
+    font-size: 18px;
     /*apliquei tipografia a todas as tags*/
     font-family: "Ubuntu", sans-serif;
     color: var(--black);
@@ -17,41 +41,43 @@
 
 body {
     background-color: var(--primary-color);
-    font-size: 18px;
+    /*     font-size: var(--font-size-root); */
+    padding: 0;
+    margin: var(--spc-normal);
 }
 
-main {
-    max-width: 800px;
-    margin: auto;
-    padding: 10px;
-}
 
 header {
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 800px;
 }
 
 
 h1 {
     font-weight: 100;
-    font-size: 3rem;
+    font-size: 2em;
+    margin: var(--spc-small) 0;
 }
 
 h2 {
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    margin: var(--spc-large) 0 var(--spc-small) 0;
 }
 
 h3 {
     font-weight: 600;
+    margin: var(--spc-large) 0 var(--spc-small) 0;
+}
+
+p {
+    margin: var(--spc-normal) 0;
 }
 
 section {
-    padding: 0px;
-    margin: 0 0 100px 0;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -60,51 +86,27 @@ a {
 
     &:hover {
         text-decoration-thickness: 3px;
-        color: var(--secundary-color);
+        color: var(--primary-color-light);
     }
 
     &.destaque {
         display: inline-block;
-        padding: 6px 12px 6px 12px;
+        padding: var(--pdd-button);
 
-        color: var(--white);
+        color: var(--secondary-color);
         text-decoration: none;
 
-        border: 1px solid var(--white);
-        border-radius: 2px;
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--radius);
 
         &:hover {
-            color: var(--secundary-color);
-            border-color: var(--secundary-color);
+            color: var(--secondary-color-dark);
+            border-color: var(--secondary-color-dark);
         }
     }
 }
 
-input {
-    padding: 5px;
-    margin: 5px;
-    border-style: none none solid none;
-    border-color: var(--primary-color);
-}
-
-textarea {
-    padding: 10px;
-    margin: 0x;
-    border-color: var(--primary-color);
-    width: 100%;
-    max-width: 800px;
-    height: 100px;
-    resize: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-
 footer {
-    max-width: 800px;
-    margin: auto;
     padding-bottom: 50px;
 
     & ul {
@@ -121,19 +123,23 @@ footer {
 
 button {
     font-size: medium;
-    color: var(--white);
+    color: var(--secondary-color);
     padding: 5px 40px;
-    border: 1px solid var(--white);
+    border: 1px solid var(--secondary-color);
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
 
     &:hover {
-        color: var(--secundary-color);
-        border: 1px solid var(--secundary-color);
+        color: var(--primary-color-light);
+        border: 1px solid var(--primary-color-light);
     }
 }
 
 /* =============================== ID =============================== */
+#container {
+    max-width: var(--max-w);
+    margin: auto;
+}
 
 #logo {
     width: 150px;
@@ -154,7 +160,7 @@ button {
 
     & li {
         display: inline;
-        margin-left: 15px;
+        margin-left: var(--spc-normal);
 
         & a {
             text-decoration: none;
@@ -167,10 +173,14 @@ button {
     }
 }
 
+#apresentacao {
+    position: relative;
+}
 
 #imgHero {
     z-index: -1;
     position: absolute;
+    right: 0;
 }
 
 /* =============================== CLASS =============================== */
@@ -184,6 +194,8 @@ button {
         display: flex;
         margin: 0;
         padding: 0;
+
+        color: var(--dark-gray);
     }
 
     & ul {
@@ -195,11 +207,11 @@ button {
     }
 
     & ul li {
-        padding: 0.5em 0.75em;
+        padding: var(--pdd-etiqueta);
         width: max-content;
         margin: 2px;
-        border: 1px solid var(--black);
-        border-radius: 2px;
+        border: 1px solid var(--dark-gray);
+        border-radius: var(--radius);
     }
 }
 
@@ -212,7 +224,7 @@ button {
     position: absolute;
     z-index: 1;
     display: none;
-    border: 1px solid var(--secundary-color);
+    border: 1px solid var(--primary-color-light);
 
 
     & a {
@@ -240,18 +252,20 @@ button {
     }
 
     & .expDescricao ul {
-
         margin: 0;
         list-style-type: square;
-        
-
-
     }
 }
 
 /* =============================== MEDIA QUERY =============================== */
 
 @media screen and (max-width: 800px) {
+
+    /* Não consegui aplicar var(--max-w) */
+    html {
+        font-size: 16px;
+    }
+
     #navMobile {
         visibility: visible;
         display: inline;
@@ -262,7 +276,13 @@ button {
         display: none;
     }
 
-    .experiencia{
+    .experiencia {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 14px;
     }
 }
