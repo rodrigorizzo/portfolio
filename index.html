@@ -4,18 +4,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>Rodrigo Rizzo Portfolio</title>
-    <meta>
+
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <div id="container">
         <header>
-            <img src="src/logo.png" alt="Logo" id="logo" />
+            <img src="src/logo.png" alt="Logo de Rodrigo escrito Rizzo" id="logo" />
 
             <nav id="navMobile">
-                <button onclick="abrirMenu()" id="botaoMenu" class="destaque">Menu</button>
+                <button onclick="abrirMenu()" id="botaoMenu" class=""> <i class="material-icons" aria-label="Menu">menu</i></button>
                 <ul class="dropDownMenu" id="mobileMenu">
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#sobre">Sobre</a></li>
@@ -43,7 +47,7 @@
 
         <main>
             <section id="apresentacao">
-                <img id="imgHero" src="src/foto perfil.jpeg" alt="Imagem" class="imgAbs" style="height:200px;" />
+                <img id="imgHero" src="src/foto perfil.jpeg" alt="Foto de Rodrigo de frente" class="imgAbs" style="height:200px;" />
                 <p>Olá, eu sou</p>
                 <h1>Rodrigo Rizzo Simões </h1>
                 <p>Desenvolvedor Front-End e Designer dedicado a criar interfaces intuitivas e inovadoras, unindo
@@ -72,7 +76,7 @@
                             <li>Wireframe</li>
                         </ul>
                     </ul>
-                    <a href="" class="destaque">Protótipo Figma</a>
+                    <a href="" class="destaque"> <i class="fa fa-figma"></i>Protótipo Figma</a>
                 </div>
                 <div class="projeto">
                     <h3>Hiato Zero: aplicativo de aprendizagem para adultos</h3>
@@ -80,19 +84,19 @@
                         primeiro ciclo da educação básica. O projeto se inicia nas etapas de Discovery e se estende até
                         a prototipagem.</p>
                     <ul class="etiqueta">
-                        <li>Detalhes:</li>
+                        <li><i class="material-icons">info</i></li>
                         <ul>
                             <li>Estudo de Caso</li>
                             <li>Projeto Individual</li>
                         </ul>
-                        <li>Ferramentas:</li>
+                        <li><i class="material-icons">build</i></li>
                         <ul>
                             <li>UX/UI</li>
                             <li>Figma</li>
                             <li>Wireframe</li>
                         </ul>
                     </ul>
-                    <a href="" class="destaque">Protótipo Figma</a>
+                    <a href="" class="destaque"> <i class="fa-brands fa-figma"></i>Protótipo Figma</a>
                 </div>
 
                 <p>Veja também meu <a href="https://www.behance.net/rodrigorizzo">Behance</a> para projetos de design
@@ -164,7 +168,9 @@
 
             <section id="contato">
                 <h2>Vamos conversar!</h2>
-                <a href="mailto:rodrigorizzo44@gmail.com">rodrigorizzo44@gmail.com</a>
+
+                <a href="mailto:rodrigorizzo44@gmail.com"> <i class="fa fa-email"></i>rodrigorizzo44@gmail.com</a>
+                <a href="https://wa.me/5511952758747"> <i class="fa fa-whatsapp"></i> Fale comigo</a>
             </section>
 
         </main>
@@ -172,11 +178,13 @@
         <footer>
             <p>Veja outros trabalhos e me acompanhe pelas redes</p>
             <ul>
-                <li><a href="https://www.linkedin.com/in/rodrigorizzos">Linkedin</a></li>
-                <li><a href="https://www.youtube.com/@rodrigo-rizzo">Youtube</a></li>
-                <li><a href="https://github.com/rodrigorizzo">Github</a></li>
-                <li><a href="https://www.behance.net/rodrigorizzo">Behance</a></li>
+                <li><a href="https://www.linkedin.com/in/rodrigorizzos" target="_blank"><i class="fa fa-linkedin" aria-label="Linkedin"></i></a></li>
+                <li><a href="https://www.youtube.com/@rodrigo-rizzo" target="_blank"><i class="fa fa-youtube-play" aria-label="Youtube"></i></a></li>
+                <li><a href="https://github.com/rodrigorizzo" target="_blank"><i class="fa fa-github" aria-label="Github"></i></a></li>
+                <li><a href="https://www.behance.net/rodrigorizzo" target="_blank"><i class="fa fa-behance" aria-label="Behance"></i></a></li>
             </ul>
+            <p> <i class="fa-brands fa-creative-commons-nc"></i> <i class="fa-brands fa-creative-commons-by"></i> Design e código por Rodrigo Rizzo Simões em 2025.</p>
+            <a href="#container"><i class="material-icons">arrow_upward_alt</i></a>
         </footer>
     </div>
 </body>
