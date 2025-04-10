@@ -9,8 +9,10 @@
     /* Cores */
     --primary-color: #ff6600;
     --primary-color-light: #fcd6b2;
-    --secondary-color: #002088;
-    --secondary-color-dark: #061853;
+    --secondary-color: #00F1FF;
+    --secondary-color-light: #c8fcff;
+
+    --secondary-color-dark: #00d0db;
     --white: #fff;
     --black: #000;
     --dark-gray: #333;
@@ -33,7 +35,7 @@
 
 html {
     /* tamanho da fonte raíz */
-    font-size: 18px;
+    font-size: 16px;
     /*apliquei tipografia a todas as tags*/
     font-family: "Ubuntu", sans-serif;
     color: var(--black);
@@ -53,6 +55,10 @@ header {
     justify-content: space-between;
 }
 
+main {
+    padding-top: var(--spc-extralarge);
+}
+
 
 h1 {
     font-weight: 100;
@@ -63,7 +69,7 @@ h1 {
 h2 {
     font-weight: 100;
     font-size: 1.7rem;
-    margin: var(--spc-large) 0 var(--spc-small) 0;
+    margin: var(--spc-extralarge) 0 var(--spc-small) 0;
 }
 
 h3 {
@@ -73,6 +79,7 @@ h3 {
 
 p {
     margin: var(--spc-normal) 0;
+    max-width: 600px;
 }
 
 section {
@@ -82,33 +89,41 @@ section {
 
 a {
     color: var(--white);
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
 
-    &:hover {
-        text-decoration-thickness: 3px;
-        color: var(--primary-color-light);
+    &:hover,
+    &:focus {
+        text-underline-offset: 6px;
+    }
+
+    &:active {
+        text-underline-offset: 1px;
     }
 
     &.destaque {
         display: inline-block;
         padding: var(--pdd-button);
 
-        color: var(--secondary-color);
+        color: var(--black);
+
         text-decoration: none;
 
-        border: 1px solid var(--secondary-color);
+        border: 2px solid var(--secondary-color);
         border-radius: var(--radius);
 
-        &:hover {
-            color: var(--secondary-color-dark);
-            border-color: var(--secondary-color-dark);
+        &:hover,
+        &:focus {
+            background-color: var(--secondary-color);
+        }
+
+        &:active {
+            background-color: var(--secondary-color-dark);
         }
     }
 }
 
 footer {
-    padding-bottom: 50px;
-
     & ul {
         list-style-type: none;
         padding: 0;
@@ -124,15 +139,23 @@ footer {
 
 button {
     font-size: medium;
-    color: var(--secondary-color);
-    padding: 5px 40px;
-    border: 1px solid var(--secondary-color);
+    color: var(--white);
+    border: none;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
+    /* fundo transparente */
+
+    /* configurações para que a área clickável seja maior para o touchscreen */
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 0 0 20px;
+    /* ícone alinhado com o conteúdo mas sem perder área clicável */
+
 
     &:hover {
-        color: var(--primary-color-light);
-        border: 1px solid var(--primary-color-light);
+        color: var(--secondary-color);
+        /*         border: 1px solid var(--primary-color-light);
+ */
     }
 }
 
@@ -143,12 +166,13 @@ button {
 }
 
 #logo {
-    width: 150px;
+    width: 100px;
 }
 
 #navMobile {
     visibility: hidden;
     display: none;
+    position: relative;
 }
 
 #navDesktop {
@@ -165,7 +189,7 @@ button {
 
         & a {
             text-decoration: none;
-            color: var(--black);
+
 
             &:hover {
                 color: var(--white);
@@ -176,6 +200,7 @@ button {
 
 #apresentacao {
     position: relative;
+    /* para imagem child ficar relativa a parente, não relativa a página */
 }
 
 #imgHero {
@@ -184,30 +209,30 @@ button {
     right: 0;
 }
 
+#footerFim {
+    margin: var(--spc-extralarge) 0 var(--spc-normal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & * {
+        padding: 0;
+        margin: 0;
+    }
+}
+
 /* =============================== CLASS =============================== */
 
 .etiqueta {
     flex-wrap: wrap;
+    font-size: 0.8rem;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-gray);
 
-    &,
-    & ul {
-        list-style-type: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-
-        color: var(--dark-gray);
-    }
-
-    & ul {
-        flex-wrap: nowrap;
-    }
-
-    &>li {
-        margin: auto 0;
-    }
-
-    & ul li {
+    & li {
         padding: var(--pdd-etiqueta);
         width: max-content;
         margin: 2px;
@@ -219,10 +244,11 @@ button {
 .dropDownMenu {
     list-style-type: none;
     background-color: var(--primary-color);
-
+    right:0;
     padding: 0;
     margin: 0;
     position: absolute;
+
     z-index: 1;
     display: none;
     border: 1px solid var(--primary-color-light);
@@ -243,8 +269,12 @@ button {
     flex-direction: row;
     justify-content: flex-start;
 
+    margin: var(--spc-large) 0;
+
     & .expPrincipal {
-        min-width: 40%;
+        min-width: 30%;
+        margin-right: 1rem;
+        padding-bottom: var(--spc-small);
 
         * {
             padding: 0 0 4px 0;
@@ -254,7 +284,42 @@ button {
 
     & .expDescricao ul {
         margin: 0;
+        padding: 0 0 0 1em;
         list-style-type: square;
+
+        &>li {
+            margin-bottom: var(--spc-small);
+
+            &::marker {
+                /* seletor das bullets da lista ul */
+                color: #fcd6b2;
+            }
+        }
+    }
+}
+
+.projeto {
+    padding: var(--spc-large) 0 var(--spc-small) 0;
+
+
+
+    &>h3 {
+        margin: var(--spc-small) 0;
+    }
+
+    & p {
+        margin: var(--spc-small) 0;
+    }
+}
+
+.limparLista {
+    list-style-type: none;
+    padding: 0;
+
+    &>li {
+        display: inline;
+        padding: 0 var(--spc-normal) 0 0;
+        margin: 0;
     }
 }
 

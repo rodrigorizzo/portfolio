@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mail" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <title>Rodrigo Rizzo Portfolio</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -19,7 +21,8 @@
             <img src="src/logo.png" alt="Logo de Rodrigo escrito Rizzo" id="logo" />
 
             <nav id="navMobile">
-                <button onclick="abrirMenu()" id="botaoMenu" class=""> <i class="material-icons" aria-label="Menu">menu</i></button>
+                <button onclick="abrirMenu()" id="botaoMenu"> <span class="material-icons" aria-label="Menu"
+                        id="iconeMenu">menu</span></button>
                 <ul class="dropDownMenu" id="mobileMenu">
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#sobre">Sobre</a></li>
@@ -47,55 +50,45 @@
 
         <main>
             <section id="apresentacao">
-                <img id="imgHero" src="src/foto perfil.jpeg" alt="Foto de Rodrigo de frente" class="imgAbs" style="height:200px;" />
+                <img id="imgHero" src="src/foto perfil.jpeg" alt="Foto de Rodrigo de frente" class="imgAbs"
+                    style="height:200px;" />
                 <p>Olá, eu sou</p>
                 <h1>Rodrigo Rizzo Simões </h1>
                 <p>Desenvolvedor Front-End e Designer dedicado a criar interfaces intuitivas e inovadoras, unindo
                     conhecimentos técnicos em HTML, CSS e JavaScript a princípios sólidos de UX/UI Design.</p>
 
                 <p>Vamos tirar sua ideia do papel?</p>
-                <a href="#Contato" class="destaque">Entre em contato</a> <a href="">Solicite um orçamento</a>
+                <a href="#contato" class="destaque">Entre em contato</a>
             </section>
 
             <section id="portfolio">
                 <h2>Portfólio</h2>
                 <div class="projeto">
-
+                    <ul class="etiqueta">
+                        <li>UX/UI</li>
+                        <li>Figma</li>
+                        <li>Wireframe</li>
+                    </ul>
                     <h3>Simular: plataforma de estudos para vestibular</h3>
                     <p> Plataforma de estudo pré-vestibular focada na resolução de questões e na realização de
                         simulados. Foi desenvolvida desde o discovery até o protótipos interativos.
                     </p>
-                    <ul class="etiqueta">
-                        <ul>
-                            <li>Estudo de Caso</li>
-                            <li>Projeto Individual</li>
-                        </ul>
-                        <ul>
-                            <li>UX/UI</li>
-                            <li>Figma</li>
-                            <li>Wireframe</li>
-                        </ul>
-                    </ul>
+
                     <a href="" class="destaque"> <i class="fa fa-figma"></i>Protótipo Figma</a>
                 </div>
                 <div class="projeto">
+                    <ul class="etiqueta">
+
+                        <li>UX/UI</li>
+                        <li>Figma</li>
+                        <li>Wireframe</li>
+
+                    </ul>
                     <h3>Hiato Zero: aplicativo de aprendizagem para adultos</h3>
                     <p>Aplicativo educativo destinado à jovens e adultos que desejam retomar o estudos, com ênfase no
                         primeiro ciclo da educação básica. O projeto se inicia nas etapas de Discovery e se estende até
                         a prototipagem.</p>
-                    <ul class="etiqueta">
-                        <li><i class="material-icons">info</i></li>
-                        <ul>
-                            <li>Estudo de Caso</li>
-                            <li>Projeto Individual</li>
-                        </ul>
-                        <li><i class="material-icons">build</i></li>
-                        <ul>
-                            <li>UX/UI</li>
-                            <li>Figma</li>
-                            <li>Wireframe</li>
-                        </ul>
-                    </ul>
+
                     <a href="" class="destaque"> <i class="fa-brands fa-figma"></i>Protótipo Figma</a>
                 </div>
 
@@ -162,29 +155,46 @@
                     </div>
 
                 </section>
-                <a href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
-                    target="_blank">Currículo completo</a> <a href="">English Resume</a>
+                <p>Se quiser saber mais sobre minhas experiências e habilidades, acesse: <br /> <a
+                        href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
+                        target="_blank">Currículo (completo)</a> ou <a href="">Resume (english)</a> </p>
             </section>
 
             <section id="contato">
-                <h2>Vamos conversar!</h2>
+                <h2>Contato</h2>
 
-                <a href="mailto:rodrigorizzo44@gmail.com"> <i class="fa fa-email"></i>rodrigorizzo44@gmail.com</a>
-                <a href="https://wa.me/5511952758747"> <i class="fa fa-whatsapp"></i> Fale comigo</a>
+                <p>Seja para um projeto, uma oportunidade ou uma parceria, estou aqui para ajudar! Escolha a forma de
+                    contato mais conveniente para você:</p>
+                <ul class="limparLista">
+                    <li>E-mail <a href="mailto:rodrigorizzo44@gmail.com">rodrigorizzo44@gmail.com</a></li>
+                    <li>Whats App <a href="https://wa.me/5511952758747"> <span class="fa fa-whatsapp"></span> Fale
+                            comigo</a>
+                    </li>
+                </ul>
+
+
+
             </section>
 
         </main>
 
         <footer>
-            <p>Veja outros trabalhos e me acompanhe pelas redes</p>
+            <h2>Redes</h2>
+            <p>Veja outros trabalhos e me acompanhe</p>
             <ul>
-                <li><a href="https://www.linkedin.com/in/rodrigorizzos" target="_blank"><i class="fa fa-linkedin" aria-label="Linkedin"></i></a></li>
-                <li><a href="https://www.youtube.com/@rodrigo-rizzo" target="_blank"><i class="fa fa-youtube-play" aria-label="Youtube"></i></a></li>
-                <li><a href="https://github.com/rodrigorizzo" target="_blank"><i class="fa fa-github" aria-label="Github"></i></a></li>
-                <li><a href="https://www.behance.net/rodrigorizzo" target="_blank"><i class="fa fa-behance" aria-label="Behance"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/rodrigorizzos" target="_blank"><i class="fa fa-linkedin"
+                            aria-label="Linkedin"></i></a></li>
+                <li><a href="https://www.youtube.com/@rodrigo-rizzo" target="_blank"><i class="fa fa-youtube-play"
+                            aria-label="Youtube"></i></a></li>
+                <li><a href="https://github.com/rodrigorizzo" target="_blank"><i class="fa fa-github"
+                            aria-label="Github"></i></a></li>
+                <li><a href="https://www.behance.net/rodrigorizzo" target="_blank"><i class="fa fa-behance"
+                            aria-label="Behance"></i></a></li>
             </ul>
-            <p> <i class="fa-brands fa-creative-commons-nc"></i> <i class="fa-brands fa-creative-commons-by"></i> Design e código por Rodrigo Rizzo Simões em 2025.</p>
-            <a href="#container"><i class="material-icons">arrow_upward_alt</i></a>
+            <div id="footerFim"> <a href="https://github.com/rodrigorizzo/portfolio" target="_blank">Design e
+                    código por Rodrigo - 2025</a></span>
+                <a href="#container"><i class="material-icons">arrow_upward</i></a>
+            </div>
         </footer>
     </div>
 </body>

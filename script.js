@@ -1,6 +1,6 @@
 const dropDown = document.getElementById("mobileMenu");
 
-let dropDownOn = false;
+let dropDownOn = false; 
 
 function abrirMenu() {
     if (!dropDownOn) {
@@ -18,7 +18,7 @@ function fecharMenu() {
 }
 
 window.onclick = function (event) {
-    if (!event.target.matches("#botaoMenu")) {
+    if (!event.target.matches("#botaoMenu") && !event.target.matches("#iconeMenu")) { 
         fecharMenu();
     }
 }
