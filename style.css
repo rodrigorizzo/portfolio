@@ -7,16 +7,18 @@
     --max-w: 800px;
 
     /* Cores */
-    --primary-color: #ff6600;
-    --primary-color-light: #fcd6b2;
+    --primary-color: #ff6600 ;
+    --primary-color-light: #ff8b3d;
+    --primary-color-dark: #b44800;
+
     --secondary-color: #00F1FF;
     --secondary-color-light: #c8fcff;
+    --secondary-color-dark: #00c0ca;
 
-    --secondary-color-dark: #00d0db;
-    --white: #fff;
-    --black: #000;
+    --white: rgb(253, 253, 253);
+    --black: #0c0c0c;
     --dark-gray: #333;
-    --light-gray: #aaa;
+    --light-gray: #d6d6d6;
 
     /* Espaçamentos */
     --spc-small: 0.5em;
@@ -27,7 +29,7 @@
     /* componentes*/
     --pdd-button: 0.6em 1.2em 0.4em 1.2em;
     --pdd-etiqueta: 0.2em 0.4em 0.1em 0.4em;
-    --radius: 2px;
+    --radius: 3px;
 
 }
 
@@ -42,7 +44,7 @@ html {
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: var(--white);
     /*     font-size: var(--font-size-root); */
     padding: 0;
     margin: var(--spc-normal);
@@ -64,6 +66,8 @@ h1 {
     font-weight: 100;
     font-size: 2em;
     margin: var(--spc-small) 0;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color);
 }
 
 h2 {
@@ -88,37 +92,35 @@ section {
 }
 
 a {
-    color: var(--white);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
+    color: var(--primary-color);
+    text-decoration: none;
 
     &:hover,
     &:focus {
-        text-underline-offset: 6px;
+        color: var(--primary-color-dark);
     }
 
     &:active {
-        text-underline-offset: 1px;
+        color: var(--primary-color-light);
     }
 
     &.destaque {
         display: inline-block;
         padding: var(--pdd-button);
 
-        color: var(--black);
+        color: var(--white);
+        background-color: var(--primary-color);
 
         text-decoration: none;
-
-        border: 2px solid var(--secondary-color);
         border-radius: var(--radius);
 
         &:hover,
         &:focus {
-            background-color: var(--secondary-color);
+            background-color: var(--primary-color-dark);
         }
 
         &:active {
-            background-color: var(--secondary-color-dark);
+            background-color: var(--primary-color-light);
         }
     }
 }
@@ -139,24 +141,27 @@ footer {
 
 button {
     font-size: medium;
-    color: var(--white);
+    color: var(--primary-color);
     border: none;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
+
     /* fundo transparente */
+    background-color: rgba(0, 0, 0, 0);
 
     /* configurações para que a área clickável seja maior para o touchscreen */
     box-sizing: border-box;
     height: 100%;
-    padding: 0 0 0 20px;
     /* ícone alinhado com o conteúdo mas sem perder área clicável */
+    padding: 0 0 0 20px;
 
-
-    &:hover {
-        color: var(--secondary-color);
-        /*         border: 1px solid var(--primary-color-light);
- */
+    &:hover,
+    &:focus {
+        color: var(--primary-color-dark);
     }
+    &:active{
+        color: var(--primary-color-light);
+    }
+
 }
 
 /* =============================== ID =============================== */
@@ -187,14 +192,7 @@ button {
         display: inline;
         margin-left: var(--spc-normal);
 
-        & a {
-            text-decoration: none;
 
-
-            &:hover {
-                color: var(--white);
-            }
-        }
     }
 }
 
@@ -213,7 +211,7 @@ button {
     margin: var(--spc-extralarge) 0 var(--spc-normal);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 
     & * {
         padding: 0;
@@ -230,12 +228,13 @@ button {
     display: flex;
     margin: 0;
     padding: 0;
-    color: var(--dark-gray);
 
     & li {
         padding: var(--pdd-etiqueta);
         width: max-content;
         margin: 2px;
+        color: var(--dark-gray);
+
         border: 1px solid var(--dark-gray);
         border-radius: var(--radius);
     }
@@ -243,15 +242,15 @@ button {
 
 .dropDownMenu {
     list-style-type: none;
-    background-color: var(--primary-color);
-    right:0;
+    background-color: var(--white);
+    right: 0;
     padding: 0;
     margin: 0;
     position: absolute;
 
     z-index: 1;
     display: none;
-    border: 1px solid var(--primary-color-light);
+    border: 1px solid var(--light-gray);
 
 
     & a {
@@ -292,7 +291,7 @@ button {
 
             &::marker {
                 /* seletor das bullets da lista ul */
-                color: #fcd6b2;
+                color: var(--secondary-color);
             }
         }
     }
