@@ -41,6 +41,8 @@ html {
     /*apliquei tipografia a todas as tags*/
     font-family: "Ubuntu", sans-serif;
     color: var(--black);
+
+    scroll-behavior: smooth;
 }
 
 body {
@@ -90,13 +92,25 @@ p {
 section {
     padding: 0;
     margin: 0;
+
+    &#portfolio {
+        animation: aparecerBaixo 1s ease;
+
+    }
 }
 
-section:not(.experiencia) {
-/*     background-color: red;
- */    animation: aparecerBaixo 1s ease;
+section:not(.experiencia, #portfolio),
+footer {
+    /*     background-color: red;
+ */
+    animation: aparecerBaixo 1s ease;
     animation-timeline: view();
-    animation-range: cover 0% cover 30%;
+    animation-range: cover 0% cover 50%;
+
+    &#portfolio {
+        animation-range: cover 0% cover 25%;
+
+    }
 }
 
 
@@ -136,6 +150,8 @@ a {
 }
 
 footer {
+
+    margin-bottom: 100px;
     & ul {
         list-style-type: none;
         padding: 0;
@@ -208,7 +224,7 @@ button {
 }
 
 #apresentacao {
-        /* para imagem child ficar relativa a parente, não relativa a página */
+    /* para imagem child ficar relativa a parente, não relativa a página */
 
     position: relative;
 }
@@ -366,9 +382,11 @@ button {
 
 /* =============================== KEYFRAMES =============================== */
 @keyframes aparecer {
-    from{
+    from {
         opacity: 0;
-    }to{
+    }
+
+    to {
         opacity: 100%;
     }
 }
@@ -389,7 +407,7 @@ button {
 @keyframes aparecerCima {
     from {
         opacity: 0%;
-        translate: 0 -100vh;
+        translate: 0 -80vh;
     }
 
     to {
