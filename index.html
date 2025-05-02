@@ -20,7 +20,6 @@
     <div id="container">
         <header>
             <img src="src/logo.svg" alt="Logo de Rodrigo escrito Rizzo" id="logo" />
-
             <nav id="navMobile">
                 <button onclick="abrirMenu()" id="botaoMenu"> <span class="material-icons" aria-label="Menu"
                         id="iconeMenu">menu</span></button>
@@ -33,7 +32,6 @@
                             target="_blank">Currículo</a></li>
                 </ul>
             </nav>
-
             <nav id="navDesktop">
                 <ul>
                     <ul>
@@ -46,24 +44,52 @@
                     </ul>
                 </ul>
             </nav>
-
         </header>
 
         <main>
             <section id="apresentacao">
-                <img id="imgHero" src="src/foto perfil.jpeg" alt="Foto de Rodrigo de frente" class="imgAbs"
-                    style="height:200px;" />
-                <p>Olá, eu sou</p>
-                <h1>Rodrigo Rizzo Simões </h1>
-                <p>Desenvolvedor Front-End e Designer dedicado a criar interfaces intuitivas e inovadoras, unindo
-                    conhecimentos técnicos em HTML, CSS e JavaScript a princípios sólidos de UX/UI Design.</p>
+            
+                <div>
+                    <p>Olá, eu sou</p>
+                    <h1>Rodrigo Rizzo Simões </h1>
+                    <p>Desenvolvedor Front-End e Designer dedicado a criar interfaces intuitivas e inovadoras, unindo
+                        conhecimentos técnicos em HTML, CSS e JavaScript a princípios sólidos de UX/UI Design.</p>
+                    <a href="#contato" class="destaque">Entre em contato</a>
 
-                <p>Vamos tirar sua ideia do papel?</p>
-                <a href="#contato" class="destaque">Entre em contato</a>
+                </div>
+                <figure id="imgHero">
+                    <img  src="src/foto perfil.jpeg" alt="Foto de Rodrigo" class="imgAbs"
+                        style="height:200px;" />
+                </figure>
             </section>
-
             <section id="portfolio">
                 <h2>Portfólio</h2>
+                <div class="projeto">
+                    <ul class="etiqueta">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <h3>Clone da Landing Page da Amazon (Caso de estudo)</h3>
+                    <p>Foi feita uma página clone da Amazon com o objetivo de treinar o posicionamento dos elementos estilizados em tela, bem como a criação de comportamentos, como menus e dropdowns.
+                    </p>
+
+                    <a href="https://rodrigorizzo.github.io/Clone-Amazon/" target="_blank" class="destaque"> Live Demo</a> <a href="" target="_blank" class="destaque">Caso de Estudo</a> <a href="https://github.com/rodrigorizzo/Clone-Amazon/" target="_blank" class="destaque">Github</a>
+                </div>
+
+                <div class="projeto">
+                    <ul class="etiqueta">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <h3>Portfólio profissional</h3>
+                    <p> Este site foi desenvolvido utilizando HTML, CSS e Javascript. Você pode acessar o código e um artigo explicando o desenvolvimento logo abaixo.
+                    </p>
+
+                    <a href="" target="_blank" class="destaque">Caso de Estudo</a> <a href="https://github.com/rodrigorizzo/portfolio" target="_blank" class="destaque">Github</a>
+                </div>
+
                 <div class="projeto">
                     <ul class="etiqueta">
                         <li>UX/UI</li>
@@ -93,18 +119,15 @@
                     <a href="" class="destaque"> <i class="fa-brands fa-figma"></i>Protótipo Figma</a>
                 </div>
 
-                <p>Veja também meu <a href="https://www.behance.net/rodrigorizzo">Behance</a> para projetos de design
+                <p>Veja também meu <a href="https://www.behance.net/rodrigorizzo">Behance</a> para projetos de design.
                 </p>
             </section>
-
-
             <section id="sobre">
                 <h2>Um pouco mais sobre mim</h2>
                 <p>Web designer formado em Design pela USP, cursando Tecnologia da Informação pela UNIVESP. Possuo
                     experiência corporativa na área gráfica, como arte finalista. Busco aprimorar minhas habilidades em
                     Front End para entregar soluções inovadoras e boas experiências ao usuário.</p>
             </section>
-
             <section id="experiencias">
                 <h2>Experiência</h2>
                 <section class="experiencia">
@@ -156,11 +179,10 @@
                     </div>
 
                 </section>
-                <p>Se quiser saber mais sobre minhas experiências e habilidades, acesse: <br /> <a
+                <p>Se quiser saber mais sobre minhas experiências e habilidades, veja <a
                         href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
-                        target="_blank">Currículo (completo)</a> ou <a href="">Resume (english)</a> </p>
+                        target="_blank"> meu Currículo</a> </p>
             </section>
-
             <section id="contato">
                 <h2>Contato</h2>
 
@@ -176,7 +198,6 @@
 
 
             </section>
-
         </main>
 
         <footer>
@@ -199,6 +220,8 @@
         </footer>
     </div>
 </body>
+
+
 <script src="script.js"></script>
 
 </html>

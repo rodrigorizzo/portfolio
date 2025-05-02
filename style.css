@@ -67,10 +67,11 @@ main {
 
 
 h1 {
-    font-weight: 100;
+    font-weight: 400;
     font-size: 2em;
     width: fit-content;
     margin: var(--spc-small) 0;
+    letter-spacing: normal;
 }
 
 h2 {
@@ -87,6 +88,7 @@ h3 {
 p {
     margin: var(--spc-normal) 0;
     max-width: 600px;
+    line-height: 1.6;
 }
 
 section {
@@ -101,8 +103,6 @@ section {
 
 section:not(.experiencia, #portfolio),
 footer {
-    /*     background-color: red;
- */
     animation: aparecerBaixo 1s ease;
     animation-timeline: view();
     animation-range: cover 0% cover 50%;
@@ -152,6 +152,7 @@ a {
 footer {
 
     margin-bottom: 100px;
+
     & ul {
         list-style-type: none;
         padding: 0;
@@ -224,16 +225,11 @@ button {
 }
 
 #apresentacao {
-    /* para imagem child ficar relativa a parente, não relativa a página */
+    display: flex;
 
-    position: relative;
 }
 
-#imgHero {
-    z-index: -1;
-    position: absolute;
-    right: 0;
-}
+
 
 #footerFim {
     margin: var(--spc-extralarge) 0 var(--spc-normal);
@@ -350,11 +346,12 @@ button {
     }
 }
 
+
+
 /* =============================== MEDIA QUERY =============================== */
 
+/* Não consegui aplicar var(--max-w) */
 @media screen and (max-width: 800px) {
-
-    /* Não consegui aplicar var(--max-w) */
     html {
         font-size: 16px;
     }
@@ -371,6 +368,11 @@ button {
 
     .experiencia {
         flex-direction: column;
+    }
+
+    #imgHero {
+        visibility: hidden;
+        display: none;
     }
 }
 
@@ -400,7 +402,6 @@ button {
     to {
         opacity: 100%;
         translate: 0 0;
-
     }
 }
 
