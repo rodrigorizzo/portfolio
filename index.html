@@ -1,229 +1,358 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Ícones -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <link rel="icon" type="image/x-icon" href="src/icone.svg">
+    <link rel="icon" type="image/x-icon" href="src/icone.svg" />
     <title>Rodrigo Rizzo Simões</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div id="container">
-        <header>
-            <img src="src/logo.svg" alt="Logo de Rodrigo escrito Rizzo" id="logo">
-            <nav id="navMobile">
-                <button onclick="abrirMenu()" id="botaoMenu"> <span class="material-icons" role="img" aria-label="Menu"
-                        id="iconeMenu">menu</span></button>
-                <ul class="dropDownMenu" id="mobileMenu">
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#experiencias">Experiência</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
-                            target="_blank">Currículo</a></li>
-                </ul>
-            </nav>
-            <nav id="navDesktop">
+      <header>
+        <img src="src/logo.svg" alt="Logo de Rodrigo escrito Rizzo" id="logo" />
+        <nav id="navMobile">
+          <button onclick="abrirMenu()" id="botaoMenu">
+            <span
+              class="material-icons"
+              role="img"
+              aria-label="Menu"
+              id="iconeMenu"
+              >menu</span
+            >
+          </button>
+          <ul class="dropDownMenu" id="mobileMenu">
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencias">Experiência</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
+                target="_blank"
+                >Currículo</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav id="navDesktop">
+          <ul>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencias">Experiência</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
+                target="_blank"
+                class="destaque"
+                >Currículo</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-                <ul>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#experiencias">Experiência</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
-                            target="_blank" class="destaque">Currículo</a></li>
-                </ul>
+      <main>
+        <section id="apresentacao">
+          <div>
+            <p>Olá, eu sou</p>
+            <h1>Rodrigo Rizzo Simões</h1>
+            <p>
+              Desenvolvedor Front-End e Designer dedicado a criar interfaces
+              intuitivas e inovadoras, unindo conhecimentos técnicos em HTML,
+              CSS e JavaScript a princípios sólidos de UX/UI Design.
+            </p>
+            <a href="#contato" class="destaque">Entre em contato</a>
+          </div>
+        </section>
+        <section id="portfolio">
+          <h2>Portfólio</h2>
 
-            </nav>
-        </header>
-
-        <main>
-            <section id="apresentacao">
-
-                <div>
-                    <p>Olá, eu sou</p>
-                    <h1>Rodrigo Rizzo Simões </h1>
-                    <p>Desenvolvedor Front-End e Designer dedicado a criar interfaces intuitivas e inovadoras, unindo
-                        conhecimentos técnicos em HTML, CSS e JavaScript a princípios sólidos de UX/UI Design.</p>
-                    <a href="#contato" class="destaque">Entre em contato</a>
-
-                </div>
-                <figure id="imgHero">
-                    <img src="src/foto_perfil.jpeg" alt="Foto de Rodrigo" class="imgAbs" style="height:200px;">
-                </figure>
-            </section>
-            <section id="portfolio">
-                <h2>Portfólio</h2>
-                <div class="projeto">
-                    <ul class="etiqueta">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                    <h3>Clone da Landing Page da Amazon (Caso de estudo)</h3>
-                    <p>Foi feita uma página clone da Amazon com o objetivo de treinar o posicionamento dos elementos
-                        estilizados em tela, bem como a criação de comportamentos, como menus e dropdowns.
-                    </p>
-
-                    <a href="https://rodrigorizzo.github.io/Clone-Amazon/" target="_blank" class="destaque"> Live
-                        Demo</a> <a href="" target="_blank" class="destaque">Caso de Estudo</a> <a
-                        href="https://github.com/rodrigorizzo/Clone-Amazon/" target="_blank" class="destaque">Github</a>
-                </div>
-
-                <div class="projeto">
-                    <ul class="etiqueta">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                    <h3>Portfólio profissional</h3>
-                    <p> Este site foi desenvolvido utilizando HTML, CSS e Javascript. Você pode acessar o código e um
-                        artigo explicando o desenvolvimento logo abaixo.
-                    </p>
-
-                    <a href="" target="_blank" class="destaque">Caso de Estudo</a> <a
-                        href="https://github.com/rodrigorizzo/portfolio" target="_blank" class="destaque">Github</a>
-                </div>
-
-                <div class="projeto">
-                    <ul class="etiqueta">
-                        <li>UX/UI</li>
-                        <li>Figma</li>
-                        <li>Wireframe</li>
-                    </ul>
-                    <h3>Simular: plataforma de estudos para vestibular</h3>
-                    <p> Plataforma de estudo pré-vestibular focada na resolução de questões e na realização de
-                        simulados. Foi desenvolvida desde o discovery até o protótipos interativos.
-                    </p>
-
-                    <a href="" class="destaque"> <i class="fa fa-figma"></i>Protótipo Figma</a>
-                </div>
-                <div class="projeto">
-                    <ul class="etiqueta">
-
-                        <li>UX/UI</li>
-                        <li>Figma</li>
-                        <li>Wireframe</li>
-
-                    </ul>
-                    <h3>Hiato Zero: aplicativo de aprendizagem para adultos</h3>
-                    <p>Aplicativo educativo destinado à jovens e adultos que desejam retomar o estudos, com ênfase no
-                        primeiro ciclo da educação básica. O projeto se inicia nas etapas de Discovery e se estende até
-                        a prototipagem.</p>
-
-                    <a href="" class="destaque"> <i class="fa-brands fa-figma"></i>Protótipo Figma</a>
-                </div>
-
-                <p>Veja também meu <a href="https://www.behance.net/rodrigorizzo">Behance</a> para projetos de design.
-                </p>
-            </section>
-            <section id="sobre">
-                <h2>Um pouco mais sobre mim</h2>
-                <p>Web designer formado em Design pela USP, cursando Tecnologia da Informação pela UNIVESP. Possuo
-                    experiência corporativa na área gráfica, como arte finalista. Busco aprimorar minhas habilidades em
-                    Front End para entregar soluções inovadoras e boas experiências ao usuário.</p>
-            </section>
-            <section id="experiencias">
-                <h2>Experiência</h2>
-                <section class="experiencia">
-                    <div class="expPrincipal">
-
-                        <h3>Desenvolvedor Front End </h3>
-                        <p>Freelance</p>
-                        <p>(Abr. 2025 – Presente)</p>
-                    </div>
-                    <div class="expDescricao">
-                        <ul>
-                            <li>Desenvolvimento de interfaces web responsivas com HTML, CSS e JS;</li>
-                            <li>Implementação de layouts a partir de protótipos no Figma;</li>
-                            <li>Utilização de Git para versionamento.</li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="experiencia">
-                    <div class="expPrincipal">
-                        <h3>Arte-finalista Júnior </h3>
-                        <p>Gráfica WBL</p>
-                        <p>(Jan. 2023 – Ago. 2024)</p>
-                    </div>
-                    <div class="expDescricao">
-                        <ul>
-                            <li>Análise e adequação de arquivos enviados por clientes aos padrões de produção;</li>
-                            <li>Montagem digital da folha de impressão com o melhor aproveitamento possível;</li>
-                            <li>Organização e ordenação dos pedidos por tipo de material, processo de produção e
-                                urgência.
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="experiencia">
-                    <div class="expPrincipal">
-                        <h3>Designer </h3>
-                        <p>Freelance</p>
-                        <p>(Abr. 2021 – Jan. 2023)</p>
-                    </div>
-                    <div class="expDescricao">
-                        <ul>
-                            <li>Responsável por todo o processo, desde o orçamento até o fechamento de arquivo para
-                                gráfica.
-                            </li>
-                            <li>Exemplos de projeto jogos de tabuleiro, identidade visual, infográfico e papelaria
-                                empresarial.
-                            </li>
-                        </ul>
-                    </div>
-
-                </section>
-                <p>Se quiser saber mais sobre minhas experiências e habilidades, veja <a
-                        href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
-                        target="_blank"> meu Currículo</a> </p>
-            </section>
-            <section id="contato">
-                <h2>Contato</h2>
-
-                <p>Seja para um projeto, uma oportunidade ou uma parceria, estou aqui para ajudar! Escolha a forma de
-                    contato mais conveniente para você:</p>
-                <ul class="limparLista">
-                    <li>E-mail <a href="mailto:rodrigorizzo44@gmail.com">rodrigorizzo44@gmail.com</a></li>
-                    <li>Whats App <a href="https://wa.me/5511952758747"> <span class="fa fa-whatsapp"></span> Fale
-                            comigo</a>
-                    </li>
-                </ul>
-
-
-
-            </section>
-        </main>
-
-        <footer>
-            <h2>Redes</h2>
-            <p>Veja outros trabalhos e me acompanhe</p>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/rodrigorizzos" target="_blank"><i class="fa fa-linkedin"
-                            role="img" aria-label="Linkedin"></i></a></li>
-                <li><a href="https://www.youtube.com/@rodrigo-rizzo" target="_blank"><i class="fa fa-youtube-play"
-                            role="img" aria-label="Youtube"></i></a></li>
-                <li><a href="https://github.com/rodrigorizzo" target="_blank"><i class="fa fa-github" role="img"
-                            aria-label="Github"></i></a></li>
-                <li><a href="https://www.behance.net/rodrigorizzo" target="_blank"><i class="fa fa-behance" role="img"
-                            aria-label="Behance"></i></a></li>
+          <div class="projeto">
+            <ul class="etiqueta">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
             </ul>
-            <div id="footerFim"> <a href="https://github.com/rodrigorizzo/portfolio" target="_blank">Design e
-                    código por Rodrigo - 2025</a>
-                <a href="#"><i role="img" aria-label="Subir ao topo do site" class="material-icons">arrow_upward</i></a>
+            <h3>
+              ReceitaHub: um web app para salvar receitas (Caso de estudo)
+            </h3>
+            <p>
+              Foi feita uma página web para que o usuário, através de um
+              formulário, salve suas receitas.
+            </p>
+
+            <a
+              href="https://rodrigorizzo.github.io/Portal-Receitas/"
+              target="_blank"
+              class="destaque"
+            >
+              Live Demo</a
+            >
+            
+            <a
+              href="https://github.com/rodrigorizzo/Portal-Receitas"
+              target="_blank"
+              class="destaque"
+              >Github</a
+            >
+
+          </div>
+
+          <div class="projeto">
+            <ul class="etiqueta">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <h3>Clone da Landing Page da Amazon (Caso de estudo)</h3>
+            <p>
+              Foi feita uma página clone da Amazon com o objetivo de treinar o
+              posicionamento dos elementos estilizados em tela, bem como a
+              criação de comportamentos, como menus e dropdowns.
+            </p>
+
+            <a
+              href="https://rodrigorizzo.github.io/Clone-Amazon/"
+              target="_blank"
+              class="destaque"
+            >
+              Live Demo</a
+            >
+       
+            <a
+              href="https://github.com/rodrigorizzo/Clone-Amazon/"
+              target="_blank"
+              class="destaque"
+              >Github</a
+            >
+          </div>
+
+          <div class="projeto">
+            <ul class="etiqueta">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <h3>Portfólio profissional</h3>
+            <p>
+              Este site foi desenvolvido utilizando HTML, CSS e Javascript. Você
+              pode acessar o código e um artigo explicando o desenvolvimento
+              logo abaixo.
+            </p>
+
+
+            <a
+              href="https://github.com/rodrigorizzo/portfolio"
+              target="_blank"
+              class="destaque"
+              >Github</a
+            >
+          </div>
+
+          <div class="projeto">
+            <ul class="etiqueta">
+              <li>UX/UI</li>
+              <li>Figma</li>
+              <li>Wireframe</li>
+            </ul>
+            <h3>Simular: plataforma de estudos para vestibular</h3>
+            <p>
+              Plataforma de estudo pré-vestibular focada na resolução de
+              questões e na realização de simulados. Foi desenvolvida desde o
+              discovery até o protótipos interativos.
+            </p>
+
+            <a href="" class="destaque">
+              <i class="fa fa-figma"></i>Protótipo Figma</a
+            >
+          </div>
+          <div class="projeto">
+            <ul class="etiqueta">
+              <li>UX/UI</li>
+              <li>Figma</li>
+              <li>Wireframe</li>
+            </ul>
+            <h3>Hiato Zero: aplicativo de aprendizagem para adultos</h3>
+            <p>
+              Aplicativo educativo destinado à jovens e adultos que desejam
+              retomar o estudos, com ênfase no primeiro ciclo da educação
+              básica. O projeto se inicia nas etapas de Discovery e se estende
+              até a prototipagem.
+            </p>
+
+            <a href="" class="destaque">
+              <i class="fa-brands fa-figma"></i>Protótipo Figma</a
+            >
+          </div>
+
+          <p>
+            Veja também meu
+            <a href="https://www.behance.net/rodrigorizzo">Behance</a> para
+            projetos de design.
+          </p>
+        </section>
+        <section id="sobre">
+          <h2>Um pouco mais sobre mim</h2>
+          <p>
+            Web designer formado em Design pela USP, cursando Tecnologia da
+            Informação pela UNIVESP. Possuo experiência corporativa na área
+            gráfica, como arte finalista. Busco aprimorar minhas habilidades em
+            Front End para entregar soluções inovadoras e boas experiências ao
+            usuário.
+          </p>
+        </section>
+        <section id="experiencias">
+          <h2>Experiência</h2>
+          <section class="experiencia">
+            <div class="expPrincipal">
+              <h3>Desenvolvedor Front End</h3>
+              <p>Freelance</p>
+              <p>(Abr. 2025 – Presente)</p>
             </div>
-        </footer>
+            <div class="expDescricao">
+              <ul>
+                <li>
+                  Desenvolvimento de interfaces web responsivas com HTML, CSS e
+                  JS;
+                </li>
+                <li>
+                  Implementação de layouts a partir de protótipos no Figma;
+                </li>
+                <li>Utilização de Git para versionamento.</li>
+              </ul>
+            </div>
+          </section>
+          <section class="experiencia">
+            <div class="expPrincipal">
+              <h3>Arte-finalista Júnior</h3>
+              <p>Gráfica WBL</p>
+              <p>(Jan. 2023 – Ago. 2024)</p>
+            </div>
+            <div class="expDescricao">
+              <ul>
+                <li>
+                  Análise e adequação de arquivos enviados por clientes aos
+                  padrões de produção;
+                </li>
+                <li>
+                  Montagem digital da folha de impressão com o melhor
+                  aproveitamento possível;
+                </li>
+                <li>
+                  Organização e ordenação dos pedidos por tipo de material,
+                  processo de produção e urgência.
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="experiencia">
+            <div class="expPrincipal">
+              <h3>Designer</h3>
+              <p>Freelance</p>
+              <p>(Abr. 2021 – Jan. 2023)</p>
+            </div>
+            <div class="expDescricao">
+              <ul>
+                <li>
+                  Responsável por todo o processo, desde o orçamento até o
+                  fechamento de arquivo para gráfica.
+                </li>
+                <li>
+                  Exemplos de projeto jogos de tabuleiro, identidade visual,
+                  infográfico e papelaria empresarial.
+                </li>
+              </ul>
+            </div>
+          </section>
+          <p>
+            Se quiser saber mais sobre minhas experiências e habilidades, veja
+            <a
+              href="https://drive.google.com/file/d/1ExRq0T3kniG8BixXzv2_vdxKu3onoOyz/view?usp=drive_link"
+              target="_blank"
+            >
+              meu Currículo</a
+            >
+          </p>
+        </section>
+        <section id="contato">
+          <h2>Contato</h2>
+
+          <p>
+            Seja para um projeto, uma oportunidade ou uma parceria, estou aqui
+            para ajudar! Escolha a forma de contato mais conveniente para você:
+          </p>
+          <ul class="limparLista">
+            <li>
+              E-mail
+              <a href="mailto:rodrigorizzo44@gmail.com"
+                >rodrigorizzo44@gmail.com</a
+              >
+            </li>
+            <li>
+              Whats App
+              <a href="https://wa.me/5511952758747">
+                <span class="fa fa-whatsapp"></span> Fale comigo</a
+              >
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <h2>Redes</h2>
+        <p>Veja outros trabalhos e me acompanhe</p>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/rodrigorizzos" target="_blank"
+              ><i class="fa fa-linkedin" role="img" aria-label="Linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@rodrigo-rizzo" target="_blank"
+              ><i class="fa fa-youtube-play" role="img" aria-label="Youtube"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/rodrigorizzo" target="_blank"
+              ><i class="fa fa-github" role="img" aria-label="Github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.behance.net/rodrigorizzo" target="_blank"
+              ><i class="fa fa-behance" role="img" aria-label="Behance"></i
+            ></a>
+          </li>
+        </ul>
+        <div id="footerFim">
+          <a href="https://github.com/rodrigorizzo/portfolio" target="_blank"
+            >Design e código por Rodrigo - 2025</a
+          >
+          <a href="#"
+            ><i
+              role="img"
+              aria-label="Subir ao topo do site"
+              class="material-icons"
+              >arrow_upward</i
+            ></a
+          >
+        </div>
+      </footer>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

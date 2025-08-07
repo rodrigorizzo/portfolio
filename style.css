@@ -31,6 +31,7 @@
     --pdd-etiqueta: 0.2em 0.4em 0.1em 0.4em;
     --radius: 3px;
 
+    font-size: 14px;
 }
 
 /* =============================== TAGS =============================== */
@@ -63,6 +64,9 @@ header {
 main {
     padding-top: var(--spc-extralarge);
     animation: aparecer 1s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
 }
 
 
@@ -77,7 +81,7 @@ h1 {
 h2 {
     font-weight: 100;
     font-size: 1.7rem;
-    margin: var(--spc-extralarge) 0 var(--spc-small) 0;
+    margin: var(--spc-small) 0 var(--spc-small) 0;
 }
 
 h3 {
@@ -103,14 +107,11 @@ section {
 
 section:not(.experiencia, #portfolio),
 footer {
-    animation: aparecerBaixo 1s ease;
+    /* @keyframes duration | easing-function | delay | name */
+    animation: 1s ease 1s aparecerBaixo;
+
     animation-timeline: view();
     animation-range: cover 0% cover 50%;
-
-    &#portfolio {
-        animation-range: cover 0% cover 25%;
-
-    }
 }
 
 
